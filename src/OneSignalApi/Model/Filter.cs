@@ -143,6 +143,27 @@ namespace OneSignalApi.Model
         public string Value { get; set; }
 
         /// <summary>
+        /// If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;lat&#x60; inside the tags.
+        /// </summary>
+        /// <value>If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;lat&#x60; inside the tags.</value>
+        [DataMember(Name = "lat", EmitDefaultValue = false)]
+        public string Lat { get; set; }
+
+        /// <summary>
+        /// If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;long&#x60; inside the tags.
+        /// </summary>
+        /// <value>If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;long&#x60; inside the tags.</value>
+        [DataMember(Name = "long", EmitDefaultValue = false)]
+        public string Long { get; set; }
+
+        /// <summary>
+        /// If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;radius&#x60; inside the tags.
+        /// </summary>
+        /// <value>If &#x60;field&#x60; is &#x60;location&#x60;, this field is *required* to specify &#x60;radius&#x60; inside the tags.</value>
+        [DataMember(Name = "radius", EmitDefaultValue = false)]
+        public string Radius { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -154,6 +175,9 @@ namespace OneSignalApi.Model
             sb.Append("  Key: ").Append(Key).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Relation: ").Append(Relation).Append("\n");
+            sb.Append("  Lat: ").Append(Lat).Append("\n");
+            sb.Append("  Long: ").Append(Long).Append("\n");
+            sb.Append("  Radius: ").Append(Radius).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
